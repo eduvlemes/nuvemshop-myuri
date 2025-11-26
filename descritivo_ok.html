@@ -1,0 +1,269 @@
+<style>.ingredient-card, .usage-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            text-align: center;
+            height: 100%;
+        }
+
+        /* Ingredient Icons */
+        .ingredient-icon, .usage-icon {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: var(--footer-background);
+        }
+
+        .ingredient-icon img {
+            width: 80px;
+            height: 80px;
+        }.info-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .info-item > div:first-child {
+            flex: 0 0 33.333333%;
+            font-weight: 600;
+        }
+
+        .info-item > div:last-child {
+            flex: 1;
+        }</style>
+    
+
+    <!-- Hero Section -->
+    <section class="my-5 hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        
+                        <h1 class="display-4 mb-4">
+                            Hidratação Multidimensional &amp; Rejuvenescimento Visível
+                        </h1>
+                        <p class="lead mb-4">
+                            Formulado com <strong>exossomos, ácido hialurônico em múltiplas formas, peptídeos e colágeno</strong>, 
+                            este tratamento avançado promove hidratação intensa e melhora a densidade da pele.
+                        </p>
+                        <div class="hero-benefits mb-4">
+                            <div class="row ">
+                                <div class="col-6">
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Suaviza rugas profundas</span>
+                                    </div>
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Reduz manchas</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Efeito lifting</span>
+                                    </div>
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Pele sensível</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg text-uppercase" onclick="$(`.js-addtocart.js-prod-submit-form.btn-add-to-cart`).click()">
+                            Comprar Agora
+                        </button>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://acdn-us.mitiendanube.com/stores/006/687/634/products/97bdc0198340d6e1e8c997c2c60984b6-23628aa775d2db3d4417579816385982-1024-1024.webp" alt="Hidratação Multidimensional - Produto Premium" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="my-5 results-section my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h1 mb-4">Resultados Perceptíveis em até 4 Semanas</h2>
+                    <p class="lead  mb-5">Comprovação científica de eficácia com segurança para pele sensível</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/e9ecef/495057?text=ANTES+-+Pele+sem+tratamento" alt="Antes do tratamento - Pele sem hidratação" class="img-fluid rounded">
+                        <div class="text-center">
+                            <span class="badge position-relative badge-secondary">ANTES</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/d4edda/155724?text=DEPOIS+-+Pele+renovada" alt="Depois do tratamento - Pele hidratada e rejuvenescida" class="img-fluid rounded">
+                        <div class="text-center">
+                            <span class="badge position-relative badge-success">DEPOIS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Ingredients Section -->
+    <section class="my-5 ingredients-section  my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Ingredientes Ativos de Alta Performance</h2>
+                    <p class="lead">Fórmula científica avançada com ingredientes premium</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🧬
+                        </div>
+                        <h5 class="m-0">Exossomos</h5>
+                        <p class="text-muted small mt-2 mb-0">Tecnologia avançada de regeneração celular</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            💧
+                        </div>
+                        <h5 class="m-0">Ácido Hialurônico</h5>
+                        <p class="text-muted small mt-2 mb-0">Múltiplas formas para hidratação profunda</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🔗
+                        </div>
+                        <h5 class="text-muted small mt-2 mb-0">Peptídeos</h5>
+                        <p class="text-muted small mt-2 mb-0">Estimulam produção natural de colágeno</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🍊
+                        </div>
+                        <h5 class="m-0">Vitamina C</h5>
+                        <p class="text-muted small mt-2 mb-0">Antioxidante e clareador de manchas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="my-5 usage-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Modo de Uso</h2>
+                    <p class="lead">Siga os passos simples para obter máximos resultados</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            💊
+                        </div>
+                        <h5 class="m-0">Aplique 3 a 5 gotas</h5>
+                        <p class="text-muted small mt-2 mb-0">Na pele limpa e seca, preferencialmente à noite</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            👋
+                        </div>
+                        <h5 class="m-0">Espalhe suavemente</h5>
+                        <p class="text-muted small mt-2 mb-0">Na área desejada do rosto com movimentos circulares</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            ✋
+                        </div>
+                        <h5 class="m-0">Dê leves batidinhas</h5>
+                        <p class="text-muted small mt-2 mb-0">Para melhor absorção e ativação dos ingredientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Info & Composition Section -->
+    <section class="my-5 product-details-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-info mb-4">
+                        <h3 class="mb-4">Informações do Produto</h3>
+                        
+                        <div class="info-item">
+                            <div><strong>Conteúdo:</strong></div>
+                            <div>30 mL</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Indicado para:</strong></div>
+                            <div>Todos os tipos de pele, incluindo pele sensível</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Resultados:</strong></div>
+                            <div>Visíveis em até 4 semanas</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Segurança:</strong></div>
+                            <div>Testado dermatologicamente</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Frequência:</strong></div>
+                            <div>Uso diário, preferencialmente noturno</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-5 mt-md-0">
+                    <div class="composition-info mb-4">
+                        <h3 class="mb-4">Composição Completa</h3>
+                        <div class="composition-content">
+                            <p class="small text-muted">
+                                <strong>INCI:</strong> Água, glicerol, propanodiol, carbonato de dicaprilila, triglicerídeo caprílico/cáprico, 
+                                diestearato de poligliceril-3 metilglicose, nicotinamida, esqualano, ectoína, vesículas extracelulares de lactobacillus, 
+                                etilhexilglicerina, caprililglicol, lecitina hidrogenada, adenosina, butileno glicol, 1,2-hexanodiol, edetato dissódico, 
+                                glicirrizato dipotássico, óleo de abacate, alantoína, crospolímero de hialuronato sódico, glicosaminoglicanas hidrolisadas, 
+                                hexacarboximetil dipeptídeo-12 heptassódico, estearato de poliglicerila-10, hialuronato de sódio, pantenol, benzil glicol, 
+                                ascorbil fosfato de sódio, extrato de centella-asiática, ácido hialurônico hidrolisado, extrato de figo, fermento de lactobacillus, 
+                                extrato da folha de centella asiática, ceramida NP, biotina, ácido fólico, piridoxina, colágeno hidrolisado, ácido hialurônico, 
+                                cianocobalamina, tocoferol, nonapeptídeo-1, acetil hexapeptídeo-8, cobre tripeptídeo-1, tripeptídeo-1, palmitoil tetrapeptídeo-7, 
+                                palmitoil tripeptídeo-1, palmitoil pentapeptídeo-4, hexapeptídeo-9, ácido linoleico, riboflavina, betacaroteno, 
+                                cloridrato de tiamina, perfume.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

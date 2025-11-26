@@ -1,0 +1,750 @@
+
+    <style>
+        :root {
+            --footer-background: #2c3e50;
+            --primary-color: #007bff;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .bg-light { background-color: #f8f9fa; }
+        .bg-white { background-color: #fff; }
+        .bg-primary { background-color: var(--footer-background); color: #fff; }
+        .bg-highlight { background-color: var(--footer-background); color: #fff; }
+        
+        .text-success { color: #28a745; }
+        .text-muted { color: #6c757d; }
+        .text-primary { color: #007bff; }
+        
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 1rem; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mb-5 { margin-bottom: 3rem; }
+        
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 1rem; }
+        .mt-4 { margin-top: 1.5rem; }
+        
+        .py-5 { padding: 3rem 0; }
+        .py-4 { padding: 2rem 0; }
+        .p-4 { padding: 1.5rem; }
+        
+        /* Grid System */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .col-6 {
+            flex: 0 0 50%;
+            padding: 0 15px;
+        }
+
+        .col-lg-3, .col-md-6 {
+            flex: 0 0 25%;
+            padding: 0 15px;
+        }
+
+        .col-lg-6 {
+            flex: 0 0 50%;
+            padding: 0 15px;
+        }
+
+        .col-lg-8 {
+            flex: 0 0 66.666667%;
+            padding: 0 15px;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Typography */
+        .display-4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .lead {
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .small {
+            font-size: 0.875rem;
+        }
+
+        /* Components */
+        .badge {
+            display: inline-block;
+            padding: 0.5em 0.75em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.375rem;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: var(--footer-background);
+            border-color: var(--footer-background);
+        }
+
+        .btn-primary:hover {
+            background-color: #1a252f;
+            border-color: #151e26;
+        }
+
+        .btn-outline-secondary {
+            color: #6c757d;
+            border-color: #6c757d;
+            background-color: transparent;
+        }
+
+        .btn-outline-secondary:hover {
+            color: #fff;
+            background-color: #6c757d;
+        }
+
+        .btn-light {
+            color: #212529;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+
+        .btn-outline-light {
+            color: #fff;
+            border-color: #fff;
+            background-color: transparent;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn + .btn {
+            margin-left: 0.5rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            height: 100%;
+        }
+
+        .shadow-sm {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .shadow-lg {
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+
+        .rounded {
+            border-radius: 0.375rem;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        /* Images */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Flex utilities */
+        .d-flex {
+            display: flex;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 5rem 0;
+        }
+
+        .before-after-card img {
+            width: 100%;
+            border-radius: 0.375rem;
+        }
+
+        .badge-secondary {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .badge-success {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        /* Ingredients Section */
+        .ingredients-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .ingredient-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            text-align: center;
+            height: 100%;
+        }
+
+        /* Ingredient Icons */
+        .ingredient-icon {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: var(--footer-background);
+        }
+
+        .ingredient-icon img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Usage Section */
+        .usage-section {
+            padding: 5rem 0;
+        }
+
+        .usage-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            text-align: center;
+            height: 100%;
+        }
+
+        .usage-icon {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: var(--footer-background);
+        }
+
+        /* Product Details Section */
+        .product-details-section {
+            padding: 5rem 0;
+        }
+
+        .product-info, .composition-info {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            height: 100%;
+        }
+
+        .product-info {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .info-item > div:first-child {
+            flex: 0 0 33.333333%;
+            font-weight: 600;
+        }
+
+        .info-item > div:last-child {
+            flex: 1;
+        }
+
+        .usage-guide {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .step-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background-color: var(--footer-background);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background-color: var(--footer-background);
+            color: #fff;
+        }
+
+        .cta-buttons {
+            margin-bottom: 2rem;
+        }
+
+        .guarantees {
+            margin-top: 2rem;
+        }
+
+        .guarantee-item {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Composition Section */
+        .composition-section {
+            padding: 5rem 0;
+        }
+
+        .composition-content {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 0.375rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991.98px) {
+            .col-lg-3 {
+                flex: 0 0 50%;
+            }
+            
+            .col-lg-6 {
+                flex: 0 0 100%;
+                margin-bottom: 2rem;
+            }
+            
+            .col-lg-8 {
+                flex: 0 0 100%;
+            }
+            
+            .display-4 {
+                font-size: 2rem;
+            }
+            
+            .btn + .btn {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .col-6, .col-md-6, .col-lg-3 {
+                flex: 0 0 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .py-5 {
+                padding: 2rem 0;
+            }
+            
+            .display-4 {
+                font-size: 1.75rem;
+            }
+            
+            .h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-section,
+            .results-section,
+            .ingredients-section,
+            .product-details-section,
+            .cta-section,
+            .composition-section {
+                padding: 2rem 0;
+            }
+            
+            .row {
+                margin: 0 -10px;
+            }
+            
+            .col, .col-6, .col-md-6, .col-lg-3, .col-lg-6, .col-lg-8 {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .btn-lg {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .btn + .btn {
+                margin-left: 0;
+            }
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="mb-3"></div>
+                        <h1 class="display-4 mb-4">
+                            Hidratação Multidimensional & Rejuvenescimento Visível
+                        </h1>
+                        <p class="lead mb-4">
+                            Formulado com <strong>exossomos, ácido hialurônico em múltiplas formas, peptídeos e colágeno</strong>, 
+                            este tratamento avançado promove hidratação intensa e melhora a densidade da pele.
+                        </p>
+                        <div class="hero-benefits mb-4">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="benefit-item">
+                                        <span>Suaviza rugas profundas</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <span>Reduz manchas</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefit-item">
+                                        <span>Efeito lifting</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <span>Pele sensível</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg">
+                            Comprar Agora
+                        </button>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://placehold.co/400x400/f8f9fa/6c757d?text=Produto+Premium" 
+                             alt="Hidratação Multidimensional - Produto Premium" 
+                             class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h1 mb-4">Resultados Perceptíveis em até 4 Semanas</h2>
+                    <p class="lead mb-5">Comprovação científica de eficácia com segurança para pele sensível</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/e9ecef/495057?text=ANTES+-+Pele+sem+tratamento" 
+                             alt="Antes do tratamento - Pele sem hidratação" 
+                             class="img-fluid rounded">
+                        <div class="text-center mt-3">
+                            <span class="badge position-relativebadge-secondary">ANTES</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/d4edda/155724?text=DEPOIS+-+Pele+renovada" 
+                             alt="Depois do tratamento - Pele hidratada e rejuvenescida" 
+                             class="img-fluid rounded">
+                        <div class="text-center mt-3">
+                            <span class="badge badge-success">DEPOIS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Ingredients Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Ingredientes Ativos de Alta Performance</h2>
+                    <p class="lead">Fórmula científica avançada com ingredientes premium</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🧬
+                        </div>
+                        <h5>Exossomos</h5>
+                        <p class="text-muted small">Tecnologia avançada de regeneração celular</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            💧
+                        </div>
+                        <h5>Ácido Hialurônico</h5>
+                        <p class="text-muted small">Múltiplas formas para hidratação profunda</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🔗
+                        </div>
+                        <h5>Peptídeos</h5>
+                        <p class="text-muted small">Estimulam produção natural de colágeno</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🍊
+                        </div>
+                        <h5>Vitamina C</h5>
+                        <p class="text-muted small">Antioxidante e clareador de manchas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="usage-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Modo de Uso</h2>
+                    <p class="lead">Siga os passos simples para obter máximos resultados</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            💊
+                        </div>
+                        <h5>Aplique 3 a 5 gotas</h5>
+                        <p class="text-muted small">Na pele limpa e seca, preferencialmente à noite</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            👋
+                        </div>
+                        <h5>Espalhe suavemente</h5>
+                        <p class="text-muted small">Na área desejada do rosto com movimentos circulares</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            ✋
+                        </div>
+                        <h5>Dê leves batidinhas</h5>
+                        <p class="text-muted small">Para melhor absorção e ativação dos ingredientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Info & Composition Section -->
+    <section class="product-details-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-info mb-4">
+                        <h3 class="mb-4">Informações do Produto</h3>
+                        
+                        <div class="info-item">
+                            <div><strong>Conteúdo:</strong></div>
+                            <div>30 mL</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Indicado para:</strong></div>
+                            <div>Todos os tipos de pele, incluindo pele sensível</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Resultados:</strong></div>
+                            <div>Visíveis em até 4 semanas</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Segurança:</strong></div>
+                            <div>Testado dermatologicamente</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Frequência:</strong></div>
+                            <div>Uso diário, preferencialmente noturno</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="composition-info mb-4">
+                        <h3 class="mb-4">Composição Completa</h3>
+                        <div class="composition-content">
+                            <p class="small text-muted">
+                                <strong>INCI:</strong> Água, glicerol, propanodiol, carbonato de dicaprilila, triglicerídeo caprílico/cáprico, 
+                                diestearato de poligliceril-3 metilglicose, nicotinamida, esqualano, ectoína, vesículas extracelulares de lactobacillus, 
+                                etilhexilglicerina, caprililglicol, lecitina hidrogenada, adenosina, butileno glicol, 1,2-hexanodiol, edetato dissódico, 
+                                glicirrizato dipotássico, óleo de abacate, alantoína, crospolímero de hialuronato sódico, glicosaminoglicanas hidrolisadas, 
+                                hexacarboximetil dipeptídeo-12 heptassódico, estearato de poliglicerila-10, hialuronato de sódio, pantenol, benzil glicol, 
+                                ascorbil fosfato de sódio, extrato de centella-asiática, ácido hialurônico hidrolisado, extrato de figo, fermento de lactobacillus, 
+                                extrato da folha de centella asiática, ceramida NP, biotina, ácido fólico, piridoxina, colágeno hidrolisado, ácido hialurônico, 
+                                cianocobalamina, tocoferol, nonapeptídeo-1, acetil hexapeptídeo-8, cobre tripeptídeo-1, tripeptídeo-1, palmitoil tetrapeptídeo-7, 
+                                palmitoil tripeptídeo-1, palmitoil pentapeptídeo-4, hexapeptídeo-9, ácido linoleico, riboflavina, betacaroteno, 
+                                cloridrato de tiamina, perfume.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+   

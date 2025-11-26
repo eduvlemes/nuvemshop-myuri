@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Sistema de Proteção por Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .code {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #005a87;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Proteção por Senha - Exemplo</h1>
+    
+    <div class="container">
+        <h2>Como usar:</h2>
+        <p>1. Inclua o script <code>access-protection.js</code> na sua página</p>
+        <p>2. O sistema será ativado automaticamente</p>
+        <p>3. A senha padrão é: <strong>senha123</strong></p>
+    </div>
+
+    <div class="container">
+        <h2>Funcionalidades:</h2>
+        <ul>
+            <li>Bloqueio automático da página</li>
+            <li>Autenticação válida por um dia</li>
+            <li>Design responsivo</li>
+            <li>Animações suaves</li>
+            <li>Fácil customização</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Testes:</h2>
+        <button onclick="window.AccessProtection.forceShowOverlay()">Mostrar Overlay</button>
+        <button onclick="window.AccessProtection.clearAuthentication()">Limpar Autenticação</button>
+        <button onclick="customizeSystem()">Personalizar Textos</button>
+        <button onclick="window.AccessProtection.destroy()">Remover Sistema</button>
+    </div>
+
+    <div class="container">
+        <h2>Customização:</h2>
+        <p>Para personalizar o sistema, você pode modificar a configuração:</p>
+        <div class="code">
+// Exemplo de customização<br>
+window.AccessProtection.updateConfig({<br>
+&nbsp;&nbsp;overlayTitle: "Área VIP",<br>
+&nbsp;&nbsp;overlayText: "Conteúdo exclusivo para membros",<br>
+&nbsp;&nbsp;correctPassword: "minhasenha",<br>
+&nbsp;&nbsp;buttonText: "Entrar"<br>
+});
+        </div>
+    </div>
+
+    <script>
+        function customizeSystem() {
+            // Exemplo de customização
+            window.AccessProtection.updateConfig({
+                overlayTitle: "Área VIP",
+                overlayText: "Conteúdo exclusivo para membros VIP",
+                correctPassword: "vip123",
+                buttonText: "Entrar na Área VIP",
+                errorMessage: "Senha VIP incorreta!"
+            });
+            
+            // Mostra o overlay para testar
+            window.AccessProtection.forceShowOverlay();
+        }
+    </script>
+
+    <!-- INCLUA O SCRIPT AQUI -->
+    <script src="access-protection.js"></script>
+</body>
+</html>

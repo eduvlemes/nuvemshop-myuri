@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Simplificado de Proteção</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .info {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .senha-info {
+            background: #fef2e2;
+            border: 2px solid #fc4f00;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .senha-info strong {
+            color: #430243;
+            font-size: 18px;
+        }
+        
+        button {
+            background: #fc4f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #e04500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Proteção Simplificado</h1>
+    
+    <div class="senha-info">
+        <strong>Senha de Teste: senha123</strong>
+    </div>
+
+    <div class="info">
+        <h2>Características:</h2>
+        <ul>
+            <li><strong>Fundo do modal:</strong> #fef2e2 (bege claro)</li>
+            <li><strong>Título:</strong> #430243 (roxo escuro)</li>
+            <li><strong>Texto:</strong> #000 (preto)</li>
+            <li><strong>Botão:</strong> #fc4f00 (laranja) com texto #fff (branco)</li>
+            <li><strong>Código simplificado:</strong> Removidas variáveis CSS complexas</li>
+            <li><strong>Design limpo:</strong> Arial como fonte padrão</li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <h2>Testes:</h2>
+        <button onclick="window.AccessProtection.forceShowOverlay()">Mostrar Overlay</button>
+        <button onclick="window.AccessProtection.clearAuthentication()">Limpar Autenticação</button>
+        <button onclick="window.AccessProtection.destroy()">Remover Sistema</button>
+    </div>
+
+    <div class="info">
+        <h2>Conteúdo Protegido</h2>
+        <p>Este é o conteúdo que estará visível apenas após a autenticação. O sistema agora usa cores mais simples e diretas, sem as variáveis CSS complexas do design anterior.</p>
+        <p>O modal tem um visual mais limpo e direto, focando na funcionalidade essencial de proteção por senha.</p>
+    </div>
+
+    <!-- Script simplificado -->
+    <script src="access-protection.js"></script>
+</body>
+</html>

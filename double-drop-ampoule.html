@@ -1,0 +1,335 @@
+<style>.ingredient-card, .usage-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            text-align: center;
+            height: 100%;
+        }
+
+        /* Ingredient Icons */
+        .ingredient-icon, .usage-icon {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: var(--footer-background);
+        }
+
+        .ingredient-icon img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .info-item > div:first-child {
+            flex: 0 0 33.333333%;
+            font-weight: 600;
+        }
+
+        .info-item > div:last-child {
+            flex: 1;
+        }
+</style>
+    
+
+    <!-- Hero Section -->
+    <section class="my-5 hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        
+                        <h1 class="display-4 mb-4">
+                            Double Drop Ampoule
+                        </h1>
+                        <p class="lead mb-4">
+                            Inspirado na mais avançada <strong>biotecnologia coreana</strong>, este tratamento multifuncional promove 
+                            <strong>hidratação profunda, reparação da barreira cutânea e rejuvenescimento visível</strong> com 
+                            <strong>10 tipos de ácido hialurônico</strong> e óleo fermentado de Tamanu.
+                        </p>
+                        <div class="hero-benefits mb-4">
+                            <div class="row ">
+                                <div class="col-6">
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Hidratação até 72h</span>
+                                    </div>
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Redução de poros</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Efeito glow</span>
+                                    </div>
+                                    <div class="benefit-item my-3">
+                                        <span>✅ Pele sensível</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg text-uppercase" onclick="$(`.js-addtocart.js-prod-submit-form.btn-add-to-cart`).click()">
+                            Comprar Agora
+                        </button>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://placehold.co/600x600/f4a460/ffffff?text=Double+Drop+Ampoule" alt="Double Drop Ampoule - Biotecnologia Coreana" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="my-5 results-section my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h1 mb-4">Resultados Clinicamente Comprovados</h2>
+                    <p class="lead  mb-5">Hidratação profunda e luminosidade visível</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/e9ecef/495057?text=ANTES+-+Pele+desidratada" alt="Antes do tratamento" class="img-fluid rounded">
+                        <div class="text-center">
+                            <span class="badge position-relative badge-secondary">ANTES</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="before-after-card mb-4">
+                        <img src="https://placehold.co/500x300/d4edda/155724?text=DEPOIS+-+Pele+Hidratada+e+Radiante" alt="Depois do tratamento - Pele com glow" class="img-fluid rounded">
+                        <div class="text-center">
+                            <span class="badge position-relative badge-success">DEPOIS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">✅ Hidratação intensa e prolongada por até 72 horas</li>
+                        <li class="mb-2">✅ Aumento da elasticidade e firmeza cutânea</li>
+                        <li class="mb-2">✅ Redução do número, área, profundidade e volume dos poros</li>
+                        <li class="mb-2">✅ Melhora perceptível da textura e maciez da pele</li>
+                        <li class="mb-2">✅ Aumento do brilho e da luminosidade natural</li>
+                        <li class="mb-2">✅ Ação calmante e reparadora em peles irritadas</li>
+                        <li class="mb-2">✅ Reforço da barreira cutânea</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Ingredients Section -->
+    <section class="my-5 ingredients-section  my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Ingredientes Ativos de Alta Performance</h2>
+                    <p class="lead">Fórmula científica avançada com ingredientes premium</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            💧
+                        </div>
+                        <h5 class="m-0">10 Tipos de Ácido Hialurônico</h5>
+                        <p class="text-muted small mt-2 mb-0">Hidratação em múltiplas camadas da pele</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🌰
+                        </div>
+                        <h5 class="m-0">Óleo de Tamanu</h5>
+                        <p class="text-muted small mt-2 mb-0">Poder regenerador e anti-inflamatório</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            ✨
+                        </div>
+                        <h5 class="m-0">Niacinamida</h5>
+                        <p class="text-muted small mt-2 mb-0">Uniformiza o tom e reforça a barreira</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🧪
+                        </div>
+                        <h5 class="m-0">Adenosina</h5>
+                        <p class="text-muted small mt-2 mb-0">Antirrugas e estimula colágeno</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🌿
+                        </div>
+                        <h5 class="m-0">Centella Asiática</h5>
+                        <p class="text-muted small mt-2 mb-0">Calmante e cicatrizante</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            💎
+                        </div>
+                        <h5 class="m-0">Ceramidas</h5>
+                        <p class="text-muted small mt-2 mb-0">Restauram a barreira lipídica</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🧬
+                        </div>
+                        <h5 class="m-0">Fermento Pichia</h5>
+                        <p class="text-muted small mt-2 mb-0">Revitalizante e antioxidante</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="ingredient-card mb-4">
+                        <div class="ingredient-icon">
+                            🍃
+                        </div>
+                        <h5 class="m-0">Extratos Botânicos</h5>
+                        <p class="text-muted small mt-2 mb-0">Moringa, Neem, Chá Verde, Figo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="my-5 usage-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="h1 mb-4">Modo de Uso</h2>
+                    <p class="lead">Siga os passos para obter máximos resultados</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            🧼
+                        </div>
+                        <h5 class="m-0">1. Limpe a pele</h5>
+                        <p class="text-muted small mt-2 mb-0">Lave bem o rosto e aplique tônico</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            🫧
+                        </div>
+                        <h5 class="m-0">2. Agite bem</h5>
+                        <p class="text-muted small mt-2 mb-0">Misture o óleo e o coquetel completamente</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            💧
+                        </div>
+                        <h5 class="m-0">3. Aplique</h5>
+                        <p class="text-muted small mt-2 mb-0">2 a 3 pumps na palma da mão</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="usage-card mb-4">
+                        <div class="usage-icon">
+                            👋
+                        </div>
+                        <h5 class="m-0">4. Massageie</h5>
+                        <p class="text-muted small mt-2 mb-0">Espalhe e dê leves batidinhas para absorver</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead"><strong>💡 Sugestão de uso:</strong> manhã e noite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Info Section -->
+    <section class="my-5 product-details-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product-info mb-4">
+                        <h3 class="mb-4">Informações do Produto</h3>
+                        
+                        <div class="info-item">
+                            <div><strong>Produto:</strong></div>
+                            <div>Double Drop Ampoule</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Indicado para:</strong></div>
+                            <div>Todos os tipos de pele, inclusive sensível e pós-procedimento</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Resultados:</strong></div>
+                            <div>Hidratação até 72 horas</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Tecnologia:</strong></div>
+                            <div>Biotecnologia coreana com 10 tipos de ácido hialurônico</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div><strong>Frequência:</strong></div>
+                            <div>Uso diário, manhã e noite</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div><strong>Textura:</strong></div>
+                            <div>Leve e sedosa, absorção rápida</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div><strong>Benefícios:</strong></div>
+                            <div>Hidratação profunda, luminosidade, textura uniforme, barreira fortalecida, efeito glow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
